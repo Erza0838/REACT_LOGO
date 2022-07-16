@@ -1,0 +1,123 @@
+
+html, body
+{
+	background-color: var(--Body-Background-Color);
+	width: 100vmax;
+	height: 100vmax;
+	box-sizing: var(--Sizing-Box);
+	overflow-x: hidden;
+	overflow-y: hidden;
+	padding: 0;
+	margin: 0;
+}
+
+/*Bagian css variable*/
+:root
+{
+	--Sizing-Box: border-box;
+	--Body-Background-Color: hsla(54, 2%, 16%, .8);
+	--Center-Circle-Background-Color: hsla(215, 72%, 65%);
+	--Relative-Position: relative;
+	--Absolute-Position: absolute;
+}
+	:root
+	{
+		--Flex-Display: flex;	
+	}
+/*Akhir css variable*/
+
+
+/*Bagian pembungkus lingkaran tengah*/
+section.Logo_Container
+{	
+	display: var(--Flex-Display);
+	position: var(--Relative-Position);
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	transform: translateY(50vh);
+	/*min-height: 90vh;*/
+}	
+/*Akhir bagian pembungkus lingkaran tengah*/
+
+/*Bagian Lingkaran tengah*/
+section.Logo_Container > div.Center_Circle
+{
+	background-color: var(--Center-Circle-Background-Color);
+	display: inline-block;
+	width: 10vmin;
+	max-width: 12vmin;
+	box-sizing: var(--Sizing-Box);
+	position: var(--Absolute-Position);
+	aspect-ratio: 3 / 3;
+	border-radius: clamp(2ex, 2.4rem, 5ex);
+}
+/*Akhir bagian lingkara tengah*/
+
+/*Bagian pembungkus kedua*/
+section.Extra_Items 
+{	
+	position: var(--Relative-Position);
+	display: var(--Flex-Display);
+	flex-direction: row;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	min-height: 98vh;
+	/*transform: translateY(50vh);*/
+}
+
+section.Extra_Items > div.Oval_Circles
+{	
+	position: var(--Absolute-Position);
+	box-sizing: var(--Sizing-Box);
+	width: 2ex;
+	max-width: 3ex;
+	padding-top: 20ex;
+	padding-bottom: 22ex;
+	padding-left: 22.5ex;
+	outline: 1.1ex solid var(--Center-Circle-Background-Color);
+	border-radius: clamp(2ex, 3rem, 5ex);
+	border-radius: 50%;
+	transform: rotate(89deg) scaleY(2);
+}
+section.Extra_Items > div.Oval_Circles:nth-child(2)
+{
+	position: var(--Absolute-Position);
+	box-sizing: var(--Sizing-Box);
+	width: 2ex;
+	max-width: 3ex;
+	padding-top: 20ex;
+	padding-bottom: 22ex;
+	padding-left: 22.5ex;
+	outline: 1.1ex solid var(--Center-Circle-Background-Color);
+	border-radius: clamp(2ex, 3rem, 5ex);
+	border-radius: 50%;
+	transform: rotate(40deg) scaleY(2);
+}
+
+section.Extra_Items > div.Oval_Circles:nth-child(3)
+{
+	position: var(--Absolute-Position);
+	box-sizing: var(--Sizing-Box);
+	width: 2ex;
+	max-width: 3ex;
+	padding-top: 20ex;
+	padding-bottom: 22ex;
+	padding-left: 22.5ex;
+	outline: 1.1ex solid var(--Center-Circle-Background-Color);
+	border-radius: clamp(2ex, 3rem, 5ex);
+	border-radius: 50%;
+	transform: rotate(-36deg) scaleY(2);
+}	
+	/*Bagian efek hover*/
+	section.Extra_Items:hover
+	{	
+		transform: rotate(0.5turn);
+		transition: all 2.5s;
+		transform-origin: center;
+		cursor: pointer;
+	}	
+	/*Akhir bagian efek hover*/
+/*Akhir bagian pembungkus kedua*/
